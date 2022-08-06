@@ -1,0 +1,28 @@
+@model Product
+
+
+<div class="row">
+    <div class="col-sm-6">
+    <form action="/Update/@Model.ProductId" method="post">
+    <h3>@Model.ProductId</h3>
+  <div class="form-group">
+    <span asp-validation-for="Name"></span>
+    <label asp-for="Name"></label>
+    <input  class="form-control" asp-for="Name"  >
+  </div>
+  <div class="form-group">
+    <span asp-validation-for="Category"></span>
+    <label asp-for="Category"></label>
+    <input  class="form-control" asp-for="Category"  >
+  </div>
+   <div class="form-group">
+    <span asp-validation-for="Price"></span>
+    <label asp-for="Price"></label>
+    <input  class="form-control" asp-for="Price"  >
+  </div>
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+    </div>
+</div>

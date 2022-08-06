@@ -1,0 +1,80 @@
+<div class="row">
+    <div class="col-sm-6">
+        <h3>Lista normale</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Category</td>
+                    <td>Price</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.list)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Category</td>
+                        <td>$ @item.Price</td>
+                    </tr>
+                }
+                
+            </tbody>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="col-sm-6">
+        <h3>Lista Renditur sipas cmimeve</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Category</td>
+                    <td>Price</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.ListaCmimeve)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Category</td>
+                        <td>$ @item.Price</td>
+                    </tr>
+                }
+                
+            </tbody>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <h3>Lista normale</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Category</td>
+                    <td>Price</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.Lista3)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Category</td>
+                        <td>$ @item.Price</td>
+                    </tr>
+                }
+                
+            </tbody>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="col-sm-6">
+        <h3>@ViewBag.Max.Name</h3>
+        <h4>Nr Listes anash eshte : @ViewBag.Nr</h4>
+    </div>
+</div>

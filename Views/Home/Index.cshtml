@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-sm-6">
+        <h3>Lista normale</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Category</td>
+                    <td>Price</td>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.marrNgaDB)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Category</td>
+                        <td>$ @item.Price</td>
+                        <td>
+                            <a href="Edit/@item.ProductId">Edit</a> | <a href="/Delete/@item.ProductId">Delete</a>
+                        </td>
+                    </tr>
+                }
+                
+            </tbody>
+            <tbody></tbody>
+        </table>
+    </div>
+    
+</div>
